@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".MemberFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/find_prog_bttn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_bttn"
+            android:text="Find"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="678dp" />
+
+        <Button
+            android:id="@+id/add_prog_bttn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_bttn"
+            android:text="Add a program"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_spon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHƯƠNG TRÌNH"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_prog_name">
+
+        <CheckBox
+            android:id="@+id/edu_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giáo dục" />
+
+        <CheckBox
+            android:id="@+id/volun_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tình nguyện" />
+
+        <CheckBox
+            android:id="@+id/intern_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thực tập" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/prog_list"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:dividerHeight="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loginName_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đang đăng nhập dưới tên"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/log_out_prog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/log_out_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng xuất"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginName_prog"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edit_prog_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="Nhập tên chương trình"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/title_spon"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
