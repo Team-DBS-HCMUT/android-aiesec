@@ -278,9 +278,8 @@ public class SponsorFragment extends Fragment {
                 if (MainScreen.account.getDept() == Account.FINANCE_DEPT ||
                         (MainScreen.account.getRole() == Account.DEPT_MANAGER &&
                                 MainScreen.account.getDept() == Account.MANAGEMENT_DEPT)){
-                    // Activate new activity
-//                    startActivityForResult(new Intent(getActivity(), AddPerson.class), 1);
-                    showDialog();
+
+                    startActivityForResult(new Intent(getActivity(), AddPerson.class), 1);
                 }
                 else {
                     Toast toast = Toast.makeText(getActivity(), "Bạn phải thuộc ban " +
