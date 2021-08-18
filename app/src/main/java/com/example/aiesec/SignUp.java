@@ -76,8 +76,8 @@ public class SignUp extends AppCompatActivity {
                             "Tạo tài khoản thành công",
                             Toast.LENGTH_LONG).show();
                     account.setName(member.getFullName());
-                    account.setUserName(String.valueOf(acc));
-                    account.setPassword(String.valueOf(pass));
+                    account.setUserName(String.valueOf(acc.getText()));
+                    account.setPassword(String.valueOf(pass.getText()));
                     Intent intent = new Intent(SignUp.this, MainScreen.class);
                     intent.putExtra(MainScreen.authorize, account);
                     startActivity(intent);
