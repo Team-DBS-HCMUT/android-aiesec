@@ -310,7 +310,7 @@ public class ConnectProtocol {
     }
     public static ArrayList<Program> searchProgramActive(){
         String sql = "SELECT [ID_chương trình], [Tên chương trình], [Loại chương trình], " +
-                "[Tọa độ], [Tên quốc gia], [THời gian kết thúc] " +
+                "[Tọa độ], [Tên quốc gia], [Thời gian bắt đầu], [THời gian kết thúc]" +
                 "FROM dbo.[Chương trình] " +
                 "WHERE [THời gian kết thúc] > GETDATE()";
 
@@ -330,6 +330,7 @@ public class ConnectProtocol {
                 temp.setType(rs.getString("Loại chương trình"));
                 temp.setCoordinate(rs.getString("Tọa độ"));
                 temp.setNation(rs.getString("Tên quốc gia"));
+                temp.setStartTime(rs.getString("Thời gian bắt đầu"));
                 temp.setEndTime(rs.getString("Thời gian kết thúc"));
                 resultList.add(temp);
             }
@@ -354,6 +355,7 @@ public class ConnectProtocol {
                 temp.setType(rs.getString("Loại chương trình"));
                 temp.setCoordinate(rs.getString("Tọa độ"));
                 temp.setNation(rs.getString("Tên quốc gia"));
+                temp.setStartTime(rs.getString("Thời gian bắt đầu"));
                 temp.setEndTime(rs.getString("Thời gian kết thúc"));
                 resultList.add(temp);
             }
@@ -559,7 +561,7 @@ public class ConnectProtocol {
         StringBuilder sql = new StringBuilder("UPDATE [Công ty] SET ");
         boolean add=false;
         if(c.company.getCompName()!=""){
-            sql.append("  [Tên công ty]=N\'"+c.company.getCompName()  +"\'");
+            sql.append("  [Tên công ty]=N\'"+c.company.getCompName()  +"\',");
             add=true;
         }if(c.company.getMS()!=0){
             sql.append("  [Mã số kinh doanh]=\'"+c.company.getMS().toString()  +"\'");

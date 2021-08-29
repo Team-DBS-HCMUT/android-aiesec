@@ -92,6 +92,6 @@ public class Program implements Serializable {
     public String toString(){
         return "\nTên chương trình: " + this.name +
                 "\nĐịa điểm: " + this.coordinate
-                + "\nThời gian diễn ra: " + this.startTime + " - " + this.endTime + "\n";
+                + "\nThời gian diễn ra: " + this.startTime + " <-> " + this.endTime + "\n";
     }
 }

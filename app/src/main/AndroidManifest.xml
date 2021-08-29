@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aiesec">
-        <activity android:name=".SignUp"/>
+        <activity android:name=".ViewCompanyInfo"></activity>
+        <activity android:name=".ViewPersonInfo" />
+        <activity android:name=".SignUp" />
         <activity android:name=".JoinProgram" />
         <activity android:name=".AddCompany" />
         <activity android:name=".AddPerson" />
@@ -29,7 +31,7 @@
         <activity android:name=".AddProgram" />
         <activity android:name=".ViewProgramDetail" />
         <activity android:name=".MainScreen" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -140,7 +140,7 @@ public class ProgramFragment extends Fragment {
         }
         else {
             Toast.makeText(getActivity(),
-                    "Bạn phải thuộc ban quản lý",
+                    "Bạn phải thuộc ban quản lý ",
                     Toast.LENGTH_LONG).show();
             return false;
         }

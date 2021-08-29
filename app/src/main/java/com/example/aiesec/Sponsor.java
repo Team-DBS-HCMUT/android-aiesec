@@ -1,8 +1,9 @@
 package com.example.aiesec;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Sponsor {
+public class Sponsor implements Serializable {
     private Integer idSponsor, idDept, money;
     public Person person;
     public Company company;
@@ -63,7 +64,7 @@ public class Sponsor {
 
     }
 
-    static class Person{
+    static class Person implements Serializable{
         private Integer pMoney;
         private Integer CMND;
         private String fullName, village, district, province, dob;
@@ -118,7 +119,7 @@ public class Sponsor {
         }
 
     }
-    static class Company{
+    static class Company implements Serializable{
         private Integer MS;
         private String compName, repName, repPhoneNum;
 

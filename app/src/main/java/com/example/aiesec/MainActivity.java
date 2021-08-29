@@ -21,7 +21,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity {
-    private static String ip = "192.168.1.4";
+    private static String ip = "192.168.1.3";
     private static String port = "1433";
     private static String Classes = "net.sourceforge.jtds.jdbc.Driver";
     private static String db = "AIESEC";
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, MainScreen.class);
                 intent.putExtra(MainScreen.authorize, temp);
                 startActivityForResult(intent, 1);
+                return;
             }
         }catch (Exception e){
             e.printStackTrace();

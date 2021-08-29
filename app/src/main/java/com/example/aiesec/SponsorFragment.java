@@ -60,7 +60,7 @@ public class SponsorFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private boolean checkAuthorize(){
+    public static boolean checkAuthorize(){
         return MainScreen.account.getDept() == Account.MANAGEMENT_DEPT ||
                 (MainScreen.account.getRole() == Account.DEPT_MANAGER &&
                         MainScreen.account.getDept() == Account.FINANCE_DEPT);
@@ -350,6 +350,26 @@ public class SponsorFragment extends Fragment {
 //            }
 //        };
 //        sponsorList.setOnItemClickListener(onItemClickListener);
+        AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Sponsor s;
+                Intent intent;
+                if (typeRequest) {
+                    s = Sponsor.personList.get(i);
+                    intent = new Intent(getActivity(), ViewPersonInfo.class);
+                    intent.putExtra(ViewPersonInfo.KEY, s);
+                }
+                else {
+                    s = Sponsor.companyList.get(i);
+                    intent = new Intent(getActivity(), ViewCompanyInfo.class);
+                    intent.putExtra(ViewCompanyInfo.KEY, s);
+                }
+                startActivityForResult(intent, 1);
+            }
+        };
+
+        sponsorList.setOnItemClickListener(onItemClickListener);
         registerForContextMenu(sponsorList);
 
         return view;
