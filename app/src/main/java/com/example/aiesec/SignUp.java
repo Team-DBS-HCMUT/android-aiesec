@@ -71,13 +71,13 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                if (ConnectProtocol.addMember(member, String.valueOf(acc), String.valueOf(pass))){
+                if (ConnectProtocol.addMember(member, acc.getText().toString(), pass.getText().toString())){
                     Toast.makeText(SignUp.this,
                             "Tạo tài khoản thành công",
                             Toast.LENGTH_LONG).show();
                     account.setName(member.getFullName());
-                    account.setUserName(String.valueOf(acc.getText()));
-                    account.setPassword(String.valueOf(pass.getText()));
+                    account.setUserName(acc.getText().toString());
+                    account.setPassword(pass.getText().toString());
                     Intent intent = new Intent(SignUp.this, MainScreen.class);
                     intent.putExtra(MainScreen.authorize, account);
                     startActivity(intent);

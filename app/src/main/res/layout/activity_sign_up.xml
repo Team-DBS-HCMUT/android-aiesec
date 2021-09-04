@@ -72,6 +72,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
         android:hint="Mật khẩu"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_acc"
         tools:layout_editor_absoluteX="0dp" />
 
