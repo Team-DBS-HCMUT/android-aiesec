@@ -56,7 +56,7 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                if (role.getCheckedRadioButtonId() == R.id.member_role){
+                if (role.getCheckedRadioButtonId() == R.id.manager_role){
                     member.setRole("Truong ban");
                     account.setRole(Account.DEPT_MANAGER);
                 }
